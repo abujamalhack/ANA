@@ -1,0 +1,18 @@
+workflows:
+  my-workflow:
+    name: Build APK from ZIP
+    environment:
+      flutter: stable
+    scripts:
+      - name: Unzip project
+        script: |
+          apt-get update
+          apt-get install -y unzip
+          unzip flutter_agora_app.zip -d .
+          rm flutter_agora_app.zip
+      - name: Get Flutter packages
+        script: flutter pub get
+      - name: Build APK
+        script: flutter build apk --release
+    artifacts:
+      - build/app/outputs/flutter-apk/app-release.apk
