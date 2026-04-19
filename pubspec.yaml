@@ -1,0 +1,54 @@
+name: voice_chat_app
+description: A professional voice chat application similar to Clubhouse.
+publish_to: 'none'
+version: 1.0.0+1
+
+environment:
+  sdk: '>=3.0.0 <4.0.0'
+
+dependencies:
+  flutter:
+    sdk: flutter
+  firebase_core: ^3.8.0
+  firebase_auth: ^5.3.3
+  cloud_firestore: ^5.5.0
+  firebase_storage: ^12.3.6
+  firebase_messaging: ^15.1.6
+  firebase_crashlytics: ^4.1.4
+  cloud_functions: ^5.1.4
+  agora_rtc_engine: ^6.4.0
+  permission_handler: ^11.3.1
+  get_it: ^7.7.0
+  flutter_bloc: ^8.1.6
+  equatable: ^2.0.5
+  intl: ^0.19.0
+  cached_network_image: ^3.4.1
+  image_picker: ^1.1.2
+  shared_preferences: ^2.3.2
+  connectivity_plus: ^6.1.0
+  flutter_native_splash: ^2.4.1
+  flutter_launcher_icons: ^0.13.1
+  url_launcher: ^6.3.1
+  flutter_secure_storage: ^9.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/icons/
+
+flutter_launcher_icons:
+  android: true
+  ios: true
+  image_path: "assets/icons/app_icon.png"
+
+flutter_native_splash:
+  color: "#FFFFFF"
+  image: "assets/splash.png"
+  android: true
+  ios: true
